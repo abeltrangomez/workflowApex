@@ -14,3 +14,25 @@ Flujo de trabajo
 |    9 | Empresa                   | Resultado emitido     | Reportar resultado (aceptado/rechazado)                       | Manual                                   | `UPDATE ENTREVISTA SET resultado_empresa=('ACEPTADO'/'RECHAZADO'), fecha_resultado=SYSTIMESTAMP` + `UPDATE POSTULACION SET resultado=..., fecha_resultado=..., estado='CERRADA'`           | Sí             | Co-formación     | Notificar al estudiante y (si aceptado) enviar docs               |
 |   10 | Co-formación              | Resultado gestionado  | Notificar resultado al estudiante                             | Manual o automática                      | (opcional) `INSERT NOTIFICACION(tipo_evento='RESULTADO', ...)` + envío correo/APEX                                                                                                         | Sí             | Estudiante       | Si aceptado: preparar documentos / si rechazado: finalizar        |
 |   11 | Sistema + Co-formación    | Docs enviados         | Enviar correo con documentos requeridos (solo si aceptado)    | Automática o manual                      | `SELECT d.* FROM VACANTE_DOCUMENTO vd JOIN DOCUMENTO_REQUERIDO d ON ... WHERE vd.id_vacante=:v ORDER BY vd.orden` + (opcional) `INSERT NOTIFICACION(tipo_evento='DOCS_FORMALIZACION',...)` | Sí             | Estudiante       | Reunir y entregar documentos para formalización                   |
+
+
+---
+
+### Tarea 1: Crear usuarios del Workspace
+
+En esta tarea crearás múltiples **usuarios del Workspace** en Oracle APEX para representar los diferentes roles de la aplicación de **Co-formación (vinculación de estudiantes con empresas co-formadoras)**. Definir estos usuarios te permitirá simular cómo interactúan **la Empresa**, el **Área de Co-formación** y los **Estudiantes** con la aplicación, y te ayudará a probar el flujo de **publicación de vacantes, postulación basada en ranking, citación a entrevista, respuesta del estudiante y notificación de resultados para formalizar la vinculación** desde diferentes perspectivas.
+
+Crearás los siguientes usuarios:
+
+**Tabla 1: Lista de usuarios a crear en el Workspace**
+
+| Nombre del usuario  | Área / Rol                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------ |
+| **CARLOS ANDRÉS**   | **Empresa co-formadora** (Talento Humano / Reclutamiento)                            |
+| **DIANA CAROLINA**  | **Empresa co-formadora** (Líder de área / Entrevistador)                             |
+| **LAURA XIMENA**    | **Área de Co-formación (Universidad)** (Gestión de ranking y postulaciones)          |
+| **JUAN PABLO**      | **Área de Co-formación (Universidad)** (Coordinación / Notificación y formalización) |
+| **VALENTINA SOFÍA** | **Estudiante**                                                                       |
+| **MATEO SEBASTIÁN** | **Estudiante**                                                                       |
+
+Si quieres que sea idéntico al ejemplo de Oracle (2 columnas “Employee Name / Department”), puedo dejar la segunda columna como **Departamento** con valores cortos tipo: `EMPRESA`, `COFORMACION`, `ESTUDIANTE`.
