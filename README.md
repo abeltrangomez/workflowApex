@@ -28,11 +28,12 @@ Crearás los siguientes usuarios:
 
 | Nombre del usuario  | Área / Rol                                                                           |
 | ------------------- | ------------------------------------------------------------------------------------ |
-| **CARLOS ANDRÉS**   | **Empresa co-formadora** (Talento Humano / Reclutamiento)                            |
-| **DIANA CAROLINA**  | **Empresa co-formadora** (Líder de área / Entrevistador)                             |
-| **LAURA XIMENA**    | **Área de Co-formación (Universidad)** (Gestión de ranking y postulaciones)          |
-| **JUAN PABLO**      | **Área de Co-formación (Universidad)** (Coordinación / Notificación y formalización) |
-| **VALENTINA SOFÍA** | **Estudiante**                                                                       |
-| **MATEO SEBASTIÁN** | **Estudiante**                                                                       |
+| **CARLOS**   | **Empresa co-formadora** (Talento Humano / Reclutamiento)                            |
+| **DIANA**  | **Empresa co-formadora** (Líder de área / Entrevistador)                             |
+| **LAURA**    | **Área de Co-formación (Universidad)** (Gestión de ranking y postulaciones)          |
+| **JUAN**      | **Área de Co-formación (Universidad)** (Coordinación / Notificación y formalización) |
+| **VALENTINA** | **Estudiante**                                                                       |
+| **MATEO** | **Estudiante**                                                                       |
 
-Si quieres que sea idéntico al ejemplo de Oracle (2 columnas “Employee Name / Department”), puedo dejar la segunda columna como **Departamento** con valores cortos tipo: `EMPRESA`, `COFORMACION`, `ESTUDIANTE`.
+--
+
